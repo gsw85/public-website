@@ -1,0 +1,394 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!-- Standard Meta -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="image_src" type="image/jpeg" href="/images/logo.png" />
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <!-- Site Properities -->
+    <meta name="generator" content="Visual Studio 2015" />
+    <title>Chartli | Interactive Chart</title>
+    <meta name="description" content="Chartli Interactive Chart" />
+    <meta name="keywords" content="html5,chart,ui, library, framework, javascript,jquery,graphic,interactive" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/demo.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                        Chartli Interacive Chart
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="line.html">Line</a>
+                </li>
+                <li>
+                    <a href="bar.html">Bar</a>
+                </li>
+                <li>
+                    <a href="spray.html">Spraying</a>
+                </li>
+                <li>
+                    <a href="wax.html">Wax Stick</a>
+                </li>
+                <li>
+                    <a href="pie.html">Pie</a>
+                </li>
+                <li>
+                    <a href="radar.html">Radar</a>
+                </li>
+             
+                <li>
+                    <a href="fd.html">Forcing-Directing</a>
+                </li>
+                <li>
+                    <a href="map.html">Mapping</a>
+                </li>
+                <li>
+                    <a href="gauged.html">Gauged</a>
+                </li>
+                <li>
+                    <a href="cone.html">Cone</a>
+                </li>
+                <li>
+                    <a href="special.html">Special</a>
+                </li>
+                <li>
+                    <a href="documentation.html">Documentation</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card card-block">
+                            <h3 class="card-title">Special Chart Example</h3>
+                            <div id="chartli1" style="height:400px;"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-sm-12 col-xs-12">
+                        <div class="card card-block">
+                            <h3 class="card-title">Special Chart Example</h3>
+                            <div id="chartli3" style="height:400px;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12 col-xs-12">
+                        <div class="card card-block">
+                            <h3 class="card-title">Special Chart Example</h3>
+                            <div id="chartli4" style="height:400px;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+    </div>
+
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/chartli.js"></script>
+
+    <script>
+        var chartliexample3 = echarts.init(document.getElementById('chartli3'));
+        option = {
+            tooltip: {
+                trigger: 'axis'
+            },
+            toolbox: {
+                show: true,
+                feature: {
+                    mark: { show: true },
+                    dataView: { show: true, readOnly: false },
+                    magicType: { show: true, type: ['line', 'bar'] },
+                    restore: { show: true },
+                    saveAsImage: { show: true }
+                }
+            },
+            calculable: true,
+            legend: {
+                data: ['Evaporation', 'Precipitation', 'Average Temperature']
+            },
+            color: ["#011627", "#247BA0", "#2EC4B6", "#E71D36", "#FF9F1C"],
+
+            xAxis: [
+                {
+                    type: 'category',
+                    data: ['1 Month', '2 Month', '3 Month', '4 Month', '5 Month', '6 Month', '7 Month', '8 Month', '9 Month', '10 Month', '11 Month', '12 Month']
+                }
+            ],
+            yAxis: [
+                {
+                    type: 'value',
+                    name: 'Water',
+                    axisLabel: {
+                        formatter: '{value} ml'
+                    }
+                },
+                {
+                    type: 'value',
+                    name: 'Temperature',
+                    axisLabel: {
+                        formatter: '{value} °C'
+                    }
+                }
+            ],
+            series: [
+
+                {
+                    name: 'Evaporation',
+                    type: 'bar',
+                    data: [2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2, 32.6, 20.0, 6.4, 3.3]
+                },
+                {
+                    name: 'Precipitation',
+                    type: 'bar',
+                    data: [2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 175.6, 182.2, 48.7, 18.8, 6.0, 2.3]
+                },
+                {
+                    name: 'Average Temperature',
+                    type: 'line',
+                    yAxisIndex: 1,
+                    data: [2.0, 2.2, 3.3, 4.5, 6.3, 10.2, 20.3, 23.4, 23.0, 16.5, 12.0, 6.2]
+                }
+            ]
+        };
+
+        chartliexample3.setOption(option);
+    </script>
+    <script>
+        var chartliexample1 = echarts.init(document.getElementById('chartli1'));
+        option = {
+            tooltip: {
+                trigger: 'axis'
+            },
+            toolbox: {
+                show: true,
+                y: 'bottom',
+                feature: {
+                    mark: { show: true },
+                    dataView: { show: true, readOnly: false },
+                    magicType: { show: true, type: ['line', 'bar', 'stack', 'tiled'] },
+                    restore: { show: true },
+                    saveAsImage: { show: true }
+                }
+            },
+            color: ["#BCE784", "#5DD39E", "#525174", "#348AA7", "#513B56"],
+
+            calculable: true,
+            legend: {
+                data: ['Direct Interview', 'E-mail Marketing', 'Advertising Alliance', 'Video Ads', 'Search Engine', 'Yandex', 'Google', 'Bing', 'Other']
+            },
+            xAxis: [
+                {
+                    type: 'category',
+                    splitLine: { show: false },
+                    data: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+                }
+            ],
+            yAxis: [
+                {
+                    type: 'value',
+                    position: 'right'
+                }
+            ],
+            series: [
+                {
+                    name: 'Direct Interview',
+                    type: 'bar',
+                    data: [320, 332, 301, 334, 390, 330, 320]
+                },
+                {
+                    name: 'E-mail Marketing',
+                    type: 'bar',
+                    tooltip: { trigger: 'item' },
+                    stack: 'Advertising',
+                    data: [120, 132, 101, 134, 90, 230, 210]
+                },
+                {
+                    name: 'Advertising Alliance',
+                    type: 'bar',
+                    tooltip: { trigger: 'item' },
+                    stack: 'Advertising',
+                    data: [220, 182, 191, 234, 290, 330, 310]
+                },
+                {
+                    name: 'Video Ads',
+                    type: 'bar',
+                    tooltip: { trigger: 'item' },
+                    stack: 'Advertising',
+                    data: [150, 232, 201, 154, 190, 330, 410]
+                },
+                {
+                    name: 'Search Engine',
+                    type: 'line',
+                    data: [862, 1018, 964, 1026, 1679, 1600, 1570]
+                },
+
+                {
+                    name: 'Search Engine',
+                    type: 'pie',
+                    tooltip: {
+                        trigger: 'item',
+                        formatter: '{a} <br />{b} : {c} ({d}%)'
+                    },
+                    center: [160, 130],
+                    radius: [0, 50],
+                    itemStyle: {
+                        normal: {
+                            labelLine: {
+                                length: 20
+                            }
+                        }
+                    },
+                    data: [
+                        { value: 251, name: 'Yandex' },
+                        { value: 1048, name: 'Google' },
+                        { value: 147, name: 'Bing' },
+                        { value: 102, name: 'Other' }
+                    ]
+                }
+            ]
+        };
+
+        chartliexample1.setOption(option);
+    </script>
+    
+
+    <script>
+        var timeTicket;
+        var chartliexample4 = echarts.init(document.getElementById('chartli4'));
+        option = {
+            title: {
+                text: 'Dynamic Data',
+                subtext: ''
+            },
+            tooltip: {
+                trigger: 'item'
+            },
+            legend: {
+                data: ['Random Data1', 'Random Data2', 'Random Data3', 'Random Data4', 'Random Data5']
+            },
+            toolbox: {
+                show: true,
+                feature: {
+                    mark: { show: true },
+                    dataView: { show: true, readOnly: false },
+                    restore: { show: true },
+                    saveAsImage: { show: true }
+                }
+            },
+            color: ["#011627", "#247BA0", "#2EC4B6", "#E71D36", "#FF9F1C"],
+
+            polar: [
+                {
+                    indicator: [
+                        { text: 'Data1' },
+                        { text: 'Data2' },
+                        { text: 'Data3' },
+                        { text: 'Data4' },
+                        { text: 'Data5' }
+                    ],
+                    center: [document.getElementById('chartli4').offsetWidth - 250, 225],
+                    radius: 100
+                }
+            ],
+            calculable: false,
+            series: [
+                {
+                    name: 'pie',
+                    type: 'pie',
+                    radius: [0, 110],
+                    center: [250, 225],
+                    data: (function () {
+                        var res = [];
+                        var len = 0;
+                        while (len++ < 5) {
+                            res.push({
+                                name: 'Random Data' + len,
+                                value: Math.round(Math.random() * 10)
+                            });
+                        }
+                        return res;
+                    })()
+                },
+                {
+                    name: 'radar',
+                    type: 'radar',
+                    itemStyle: { normal: { areaStyle: { type: 'default' } } },
+                    data: (function () {
+                        var res = [];
+                        var len = 0;
+                        while (len++ < 3) {
+                            res.push({
+                                name: 'data' + len,
+                                value: [
+                                    Math.round(Math.random() * 100),
+                                    Math.round(Math.random() * 100),
+                                    Math.round(Math.random() * 100),
+                                    Math.round(Math.random() * 100),
+                                    Math.round(Math.random() * 100)
+                                ]
+                            });
+                        }
+                        return res;
+                    })()
+                }
+            ]
+        };
+        var lastIndex = 5;
+        var axisData;
+        clearInterval(timeTicket);
+        timeTicket = setInterval(function () {
+            lastIndex += 1;
+
+            chartliexample4.addData([
+                [
+                    0,
+                    {
+                        name: 'Random Data' + lastIndex,
+                        value: Math.round(Math.random() * 10)
+                    },
+                    false,
+                    false,
+                    'Random Data' + lastIndex
+                ],
+                [
+                    1,
+                    {
+                        name: 'data' + lastIndex,
+                        value: [
+                            Math.round(Math.random() * 100),
+                            Math.round(Math.random() * 100),
+                            Math.round(Math.random() * 100),
+                            Math.round(Math.random() * 100),
+                            Math.round(Math.random() * 100)
+                        ]
+                    },
+                    false,
+                    false
+                ]
+            ]);
+        }, 2000);
+        chartliexample4.setOption(option);
+    </script>
+</body>
+</html>

@@ -1,0 +1,926 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!-- Standard Meta -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="image_src" type="image/jpeg" href="/images/logo.png" />
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <!-- Site Properities -->
+    <meta name="generator" content="Visual Studio 2015" />
+    <title>Chartli | Interactive Chart</title>
+    <meta name="description" content="Chartli Interactive Chart" />
+    <meta name="keywords" content="html5,chart,ui, library, framework, javascript,jquery,graphic,interactive" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/demo.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                        Chartli Interacive Chart
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="line.html">Line</a>
+                </li>
+                <li>
+                    <a href="bar.html">Bar</a>
+                </li>
+                <li>
+                    <a href="spray.html">Spraying</a>
+                </li>
+                <li>
+                    <a href="wax.html">Wax Stick</a>
+                </li>
+                <li>
+                    <a href="pie.html">Pie</a>
+                </li>
+                <li>
+                    <a href="radar.html">Radar</a>
+                </li>
+              
+                <li>
+                    <a href="fd.html">Forcing-Directing</a>
+                </li>
+                <li>
+                    <a href="map.html">Mapping</a>
+                </li>
+                <li>
+                    <a href="gauged.html">Gauged</a>
+                </li>
+                <li>
+                    <a href="cone.html">Cone</a>
+                </li>
+                <li>
+                    <a href="special.html">Special</a>
+                </li>
+                <li>
+                    <a href="documentation.html">Documentation</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card card-block">
+                            <h3 class="card-title">Get Started</h3>
+                           <xmp>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/demo.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="chartli1" height="400px"></div>
+
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/chartli.js"></script>
+</body>
+</html>
+                           </xmp>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card card-block">
+                            <h3 class="card-title">Script Trigger</h3>
+                           <xmp>
+<script type="text/javascript">
+
+
+var chartliexample1 = echarts.init(document.getElementById('chartli1'));
+var option = {
+...
+}
+chartliexample1.setOption(option);
+
+
+</script>
+                           </xmp>
+                            <div class="alert alert-success">Done! Its too simple..</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card card-block">
+                            <h3 class="card-title">To Be Responsive</h3>
+                            <div class="alert alert-info">
+                                Make Charts for responsive  window.onresize = chartliexample1.resize
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card card-block">
+                            <h3 class="card-title">Datas can be using with json</h3>
+                            <xmp>
+$.ajax({
+type: "GET",
+contentType: 'application/json; charset=utf-8',
+dataType: 'json',
+url: 'data/chartlibar1.json',//json path
+error: function () {
+alert("An error occurred.");
+},
+success: function (data) {
+//alert(data.male)//data control
+var chartliexample = echarts.init(document.getElementById('barchart'));
+barChartOne.setOption({
+title: {
+text: '',
+subtext: ''
+},
+tooltip: {
+trigger: 'axis'
+},
+legend: {
+data: ['Male', 'Female']
+},
+toolbox: {
+show: true,
+feature: {
+mark: { show: false },
+dataView: { show: false, readOnly: false },
+magicType: { show: true, type: ['line', 'bar'] },
+restore: { show: true, title: 'Refresh' },
+saveAsImage: { show: true, title: 'Save As Image' }
+}
+},
+calculable: true,
+xAxis: [
+{
+type: 'category',
+data: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']
+}
+],
+yAxis: [
+{
+type: 'value'
+}
+],
+series: [
+{
+name: 'Male',
+type: 'bar',
+data: data.male,//male datas from json
+markPoint: {
+data: [
+{ type: 'max', name: 'Male' },
+{ type: 'min', name: 'Male' }
+]
+},
+markLine: {
+data: [
+{ type: 'average', name: 'Avarage' }
+]
+}
+},
+{
+name: 'Female',
+type: 'bar',
+data: data.female,//female datas from json
+markPoint: {
+data: [
+{ name: 'Female', value: 182.2, xAxis: 7, yAxis: 183, symbolSize: 18 },
+{ name: 'Female', value: 2.3, xAxis: 11, yAxis: 3 }
+]
+},
+markLine: {
+data: [
+{ type: 'average', name: 'Avarage' }
+]
+}
+}
+]
+});
+}
+});
+                            </xmp>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card card-block">
+                            <h3 class="card-title">Json example</h3>
+                           <xmp>
+{
+"high_temp": [ 11, 11, 15, 13, 12, 13, 10 ],
+"low_temp": [ 8, -2, 2, 5, 3, 2, 0 ],
+"days": [ "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" ]
+}
+                           </xmp>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card card-block">
+                            <h3 class="card-title">Options</h3>
+                            <div class="alert alert-info">
+                                Chartli Options
+                            </div>
+                            <xmp>
+var option = {
+backgroundColor: 'rgba(0,0,0,0)',
+color: [ ... ],
+renderAsImage: false,
+calculable: false,
+animation: true,
+timeline: { ... },
+title: { ... },
+toolbox: { ... },
+tooltip: { ... },
+legend: { ... },
+dataRange: { ... },
+dataZoom: { ... },
+roamController: { ... },
+grid: { ... },
+xAxis: [ ... ],
+yAxis: [ ... ],
+series: [ ... ],
+polar: { ... },
+symbolList: [ ... ],
+calculableColor: 'rgba(255,165,0,0.6)',
+calculableHolderColor: '#ccc',
+nameConnector: '&',
+valueConnector: ':',
+addDataAnimation: true,
+animationThreshold: 2000,
+animationDuration: 2000,
+animationDurationUpdate: 500,
+animationEasing: 'ExponentialOut',
+noDataLoadingOption: { ... },
+}
+                            </xmp>
+                            <div class="alert alert-info">
+                                Timeline Settings
+                            </div>
+                            <xmp>
+timeline: {
+show: true,
+zlevel: 0,
+z: 4,
+type: 'time',
+notMerge: false,
+realtime: true,
+x: 80,
+y: null,
+x2: 80,
+y2: 0,
+width: 100%,
+height: 50,
+backgroundColor: 'rgba(0,0,0,0)',
+borderWidth: 0,
+borderColor: '#ccc',
+padding: 5,
+controlPosition: 'left',
+autoPlay: false,
+loop: true,
+playInterval: 2000,
+lineStyle: { ... },
+label: { ... },
+checkpointStyle: { ... },
+controlStyle: { ... },
+symbol: 'emptyDiamond',
+symbolSize: 4,
+currentIndex: 0,
+data: [ ... ],
+},
+</xmp>
+                            <div class="alert alert-info">
+                                Title Settings
+                            </div>
+                            <xmp>
+title: {
+show: true,
+zlevel: 0,
+z: 6,
+text: '',
+link: '',
+target: null,
+subtext: '',
+sublink: '',
+subtarget: null,
+x: 'left',
+y: 'top',
+textAlign: null,
+backgroundColor: 'rgba(0,0,0,0)',
+borderColor: '#ccc',
+borderWidth: 0,
+padding: 5,
+itemGap: 5,
+textStyle: { ... },
+subtextStyle: { ... },
+},
+                            </xmp>
+                            <div class="alert alert-info">
+                               Toolbox Settings
+                            </div>
+                            <xmp>
+toolbox: {
+show: false,
+zlevel: 0,
+z: 6,
+orient: 'horizontal',
+x: 'right',
+y: 'top',
+backgroundColor: 'rgba(0,0,0,0)',
+borderColor: '#ccc',
+borderWidth: 0,
+padding: 5,
+itemGap: 10,
+itemSize: 16,
+color: [ ... ],
+disableColor: '#ddd',
+effectiveColor: 'red',
+showTitle: true,
+textStyle: { ... },
+feature: { ... },
+},
+                            </xmp>
+                            <div class="alert alert-info">
+                                Tooltip Settings
+                            </div>
+                            <xmp>
+tooltip: {
+show: true,
+zlevel: 1,
+z: 8,
+showContent: true,
+trigger: 'item',
+position: null,
+formatter: null,
+islandFormatter: '{a} < br/>{b} : {c}',
+showDelay: 20,
+hideDelay: 100,
+transitionDuration: 0.4,
+enterable: false,
+backgroundColor: 'rgba(0,0,0,0.7)',
+borderColor: '#333',
+borderRadius: 4,
+borderWidth: 0,
+padding: 5,
+axisPointer: { ... },
+textStyle: { ... },
+},
+                            </xmp>
+                            <div class="alert alert-info">
+                                Legend Settings
+                            </div>
+                            <xmp>
+legend: {
+show: true,
+zlevel: 0,
+z: 4,
+orient: 'horizontal',
+x: 'center',
+y: 'top',
+backgroundColor: 'rgba(0,0,0,0)',
+borderColor: '#ccc',
+borderWidth: 0,
+padding: 5,
+itemGap: 10,
+itemWidth: 20,
+itemHeight: 14,
+textStyle: { ... },
+formatter: null,
+selectedMode: true,
+selected: null,
+data: [ ... ],
+},
+                            </xmp>
+                            <div class="alert alert-info">
+                               Datatange Settings
+                            </div>
+                            <xmp>
+dataRange: {
+show: true,
+zlevel: 0,
+z: 4,
+orient: 'vertical',
+x: 'left',
+y: 'bottom',
+backgroundColor: 'rgba(0,0,0,0)',
+borderColor: '#ccc',
+borderWidth: 0,
+padding: 5,
+itemGap: 10,
+itemWidth: 20,
+itemHeight: 14,
+min: null,
+max: null,
+precision: 0,
+splitNumber: 5,
+splitList: null,
+range: null,
+selectedMode: true,
+calculable: false,
+hoverLink: true,
+realtime: true,
+color: [ ... ],
+formatter: null,
+text: null,
+textStyle: { ... },
+},
+                            </xmp>
+                            <div class="alert alert-info">
+                               Zoom Settings
+                            </div>
+                            <xmp>
+dataZoom: {
+zlevel: 0,
+z: 4,
+show: false,
+orient: 'horizontal',
+x: 100%,
+y: 100%,
+width: <100% | 30>,
+height: <100% | 30>,
+backgroundColor: 'rgba(0,0,0,0)',
+dataBackgroundColor: '#eee',
+fillerColor: 'rgba(144,197,237,0.2...',
+handleColor: 'rgba(70,130,180,0.8)',
+handleSize: 8,
+xAxisIndex: null,
+yAxisIndex: null,
+start: 0,
+end: 100,
+showDetail: true,
+realtime: false,
+zoomLock: false,
+},
+                            </xmp>
+                            <div class="alert alert-info">
+                                Roam Settings
+                            </div>
+                            <xmp>
+roamController: {
+show: true,
+zlevel: 0,
+z: 4,
+x: 'left',
+y: 'top',
+width: 80,
+height: 120,
+backgroundColor: 'rgba(0,0,0,0)',
+borderColor: '#ccc',
+borderWidth: 0,
+padding: 5,
+fillerColor: '#fff',
+handleColor: '#6495ed',
+step: 15,
+mapTypeControl: null,
+},
+                            </xmp>
+                            <div class="alert alert-info">
+                                Grid Settings
+                            </div>
+                            <xmp>
+grid: {
+zlevel: 0,
+z: 0,
+x: 80,
+y: 60,
+x2: 80,
+y2: 60,
+width: 100%,
+height: 100%,
+backgroundColor: 'rgba(0,0,0,0)',
+borderWidth: 1,
+borderColor: '#ccc',
+},
+                            </xmp>
+                            <div class="alert alert-info">
+                                Xaxis,Yaxis Settings <small>Can See Full Using in Examples</small>
+                            </div>
+                            <xmp>
+xAxis: [
+{ type: 'category', ... },
+{ type: 'value', ... },
+{ type: 'time', ... },
+{ type: 'log', ... },
+],
+yAxis: [
+{ type: 'category', ... },
+{ type: 'value', ... },
+{ type: 'time', ... },
+{ type: 'log', ... },
+],
+                            </xmp>
+                            <div class="alert alert-info">
+                                Series Type
+                            </div>
+                            <xmp>
+series: [
+{ type: 'line', ... },
+{ type: 'bar', ... },
+{ type: 'k', ... },
+{ type: 'pie', ... },
+{ type: 'radar', ... },
+{ type: 'chord', ... },
+{ type: 'force', ... },
+{ type: 'map', ... },
+{ type: 'gauge', ... },
+{ type: 'funnel', ... },
+],
+                            </xmp>
+                            <div class="alert alert-info">
+                                Polar Settings
+                            </div>
+                            <xmp>
+polar: {
+zlevel: 0,
+z: 0,
+center: [ ... ],
+radius: <'75%'>,
+startAngle: 90,
+splitNumber: 5,
+name: { ... },
+boundaryGap: [ ... ],
+scale: false,
+axisLine: { ... },
+axisLabel: { ... },
+splitLine: { ... },
+splitArea: { ... },
+type: 'polygon',
+indicator: [ ... ],
+},
+                            </xmp>
+                            <div class="alert alert-info">
+                                Series Line Settings
+                            </div>
+                            <xmp>
+type: 'line',
+name: null,
+tooltip: { ... },
+clickable: true,
+itemStyle: { ... },
+data: [ ... ],
+stack: null,
+xAxisIndex: 0,
+yAxisIndex: 0,
+symbol: null,
+symbolSize: <2 | 4>,
+symbolRotate: null,
+showAllSymbol: false,
+smooth: false,
+dataFilter: <'nearst'>,
+legendHoverLink: true,
+markPoint: { ... },
+markLine: { ... },
+z: 2,
+zlevel: 0,
+</xmp>
+                            <div class="alert alert-info">
+                               Series Bar Settings
+                            </div>
+                            <xmp>
+type: 'bar',
+name: null,
+tooltip: { ... },
+clickable: true,
+itemStyle: { ... },
+data: [ ... ],
+stack: null,
+xAxisIndex: 0,
+yAxisIndex: 0,
+barGap: '30%',
+barCategoryGap: '20%',
+barMinHeight: 0,
+barWidth: 100%,
+barMaxWidth: 100%,
+legendHoverLink: true,
+markPoint: { ... },
+markLine: { ... },
+z: 2,
+zlevel: 0,
+                            </xmp>
+                            <div class="alert alert-info">
+                               Series Pie Settings
+                            </div>
+                            <xmp>
+type: 'pie',
+name: null,
+tooltip: { ... },
+clickable: true,
+itemStyle: { ... },
+data: [ ... ],
+legendHoverLink: true,
+center: [ ... ],
+radius: [ ... ],
+startAngle: 90,
+minAngle: 0,
+clockWise: true,
+roseType: null,
+selectedOffset: 10,
+selectedMode: null,
+markPoint: { ... },
+markLine: { ... },
+z: 2,
+zlevel: 0,
+},
+                            </xmp>
+                            <div class="alert alert-info">
+                               Series Radar Settings
+                            </div>
+                            <xmp>
+type: 'radar',
+name: null,
+tooltip: { ... },
+clickable: true,
+itemStyle: { ... },
+data: [ ... ],
+symbol: null,
+symbolSize: <2 | 4>,
+symbolRotate: null,
+legendHoverLink: true,
+polarIndex: 0,
+markPoint: { ... },
+markLine: { ... },
+z: 2,
+zlevel: 0,
+</xmp>
+                            <div class="alert alert-info">
+                                Series Chord Settings
+                            </div>
+                            <xmp>
+type: 'chord',
+name: null,
+tooltip: { ... },
+clickable: true,
+itemStyle: { ... },
+data: [{ ... }],
+symbol: null,
+symbolSize: ... ,
+clockWise: false,
+categories: { ... },
+links: { ... },
+matrix: [ ... ],
+minRadius: 10,
+maxRadius: 20,
+ribbonType: true,
+showScale: false,
+showScaleText: false,
+padding: 2,
+sort: 'none',
+sortSub: 'none',
+nodes: [{ ... }],
+markPoint: { ... },
+markLine: { ... },
+z: 2,
+zlevel: 0,
+},
+                            </xmp>
+                            <div class="alert alert-info">
+                                Series Forced Directing Settings
+                            </div>
+                            <xmp>
+type: 'force',
+name: null,
+tooltip: { ... },
+clickable: true,
+itemStyle: { ... },
+data: [{ ... }],
+symbol: null,
+symbolSize: ... ,
+large: false,
+center: [ ... ],
+roam: false,
+categories: { ... },
+links: { ... },
+matrix: [ ... ],
+size: 100%,
+minRadius: 10,
+maxRadius: 20,
+linkSymbol: 'none',
+linkSymbolSize: [ ... ],
+scaling: 1,
+gravity: 1,
+draggable: true,
+useWorker: false,
+steps: 1,
+nodes: [{ ... }],
+markPoint: { ... },
+markLine: { ... },
+z: 2,
+zlevel: 0,
+</xmp>
+                            <div class="alert alert-info">
+                               Series Map Settings
+                            </div>
+                            <xmp>
+type: 'map',
+name: null,
+tooltip: { ... },
+clickable: true,
+itemStyle: { ... },
+data: [ ... ],
+selectedMode: null,
+mapType: 'usa',
+hoverable: true,
+dataRangeHoverLink: true,
+mapLocation: { ... },
+mapValueCalculation: 'sum',
+mapValuePrecision: 0,
+showLegendSymbol: true,
+roam: false,
+scaleLimit: null,
+nameMap: null,
+textFixed: null,
+geoCoord: null,
+heatmap: { ... },
+markPoint: { ... },
+markLine: { ... },
+z: 2,
+zlevel: 0,
+                            </xmp>
+                            <div class="alert alert-info">
+                                Series Gauged Settings
+                            </div>
+                            <xmp>
+type: 'gauge',
+name: null,
+tooltip: { ... },
+clickable: true,
+itemStyle: { ... },
+data: [ ... ],
+legendHoverLink: true,
+center: [ ... ],
+radius: [ ... ],
+startAngle: 225,
+endAngle: -45,
+min: 0,
+max: 100,
+splitNumber: 10,
+axisLine: { ... },
+axisTick: { ... },
+axisLabel: { ... },
+splitLine: { ... },
+pointer: { ... },
+title: { ... },
+detail: { ... },
+markPoint: { ... },
+markLine: { ... },
+z: 2,
+zlevel: 0,
+                            </xmp>
+                            <div class="alert alert-info">
+                                Series Cone Settings
+                            </div>
+                            <xmp>
+type: 'funnel',
+name: null,
+tooltip: { ... },
+clickable: true,
+itemStyle: { ... },
+data: [ ... ],
+legendHoverLink: true,
+sort: 'descending',
+min: 0,
+max: 100,
+x: 80,
+y: 60,
+x2: 80,
+y2: 60,
+width: null,
+height: null,
+funnelAlign: 'center',
+minSize: '0%',
+maxSize: '100%',
+gap: 0,
+markPoint: { ... },
+markLine: { ... },
+z: 2,
+zlevel: 0,
+                            </xmp>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card card-block">
+                            <h3 class="card-title">Options Table</h3>
+                            <table cellspacing="0" class="table table-stripped">
+                                <tbody>
+                                    <tr>
+                                        <th> Name </th>
+                                        <th> Description </th>
+                                    </tr>
+                                    <tr class="bgGreen">
+                                        <td> <b>{color}</b> backgroundColor </td>
+                                        <td> The background color or gradient for the outer chart area, Support rgba and defaults to null, transprent. </td>
+                                    </tr>
+                                    <tr class="bgGreen">
+                                        <td> <b>{Array}</b> color </td>
+                                        <td> List of color for the array series,, possible array is: ['#87cefa', 'rgba(123,123,123,0.5)','...']. When there are more series than colors in the list, new colors are pulled from the start again. </td>
+                                    </tr>
+                                    <tr class="bgGreen">
+                                        <td> <b>{boolean}</b> renderAsImage </td>
+                                        <td> Allows rendering as image in any browser but IE8</td>
+                                    </tr>
+                                    <tr class="bgGreen">
+                                        <td> <b>{boolean}</b> calculable </td>
+                                        <td>
+                                            Specifies whether the drag-recalculate feature will be enabled. Defaults to false.
+                                        </td>
+                                    </tr>
+                                    <tr class="bgGreen">
+                                        <td> <b>{boolean}</b> animation </td>
+                                        <td>
+                                            Specifies whether the animation will be enabled. Defaults to true.
+                                        </td>
+                                    </tr>
+
+                                    <tr class="bgRed">
+                                        <td> <b>{Object}</b> timeline </td>
+                                        <td> Timeline at most one timeline control is allowed in one chart. </td>
+                                    </tr>
+                                    <tr class="bgRed">
+                                        <td> <b>{Object}</b> title </td>
+                                        <td> Title, at most one title control is allowed in one chart. </td>
+                                    </tr>
+                                    <tr class="bgRed">
+                                        <td> <b>{Object}</b> toolbox </td>
+                                        <td> Toolbox,  at most one toolbox is allowed in one chart. </td>
+                                    </tr>
+                                    <tr class="bgRed">
+                                        <td> <b>{Object}</b> tooltip </td>
+                                        <td> Tooltip,  A small "hover box" with detailed information about the item being hovered over. </td>
+                                    </tr>
+                                    <tr class="bgRed">
+                                        <td> <b>{Object}</b> legend </td>
+                                        <td> Legend, at most one legend is allowed in one single/combination chart. </td>
+                                    </tr>
+                                    <tr class="bgRed">
+                                        <td> <b>{Object}</b> dataRange </td>
+                                        <td> DataRange, data range. </td>
+                                    </tr>
+                                    <tr class="bgRed">
+                                        <td> <b>{Object}</b> dataZoom </td>
+                                        <td> DataZoom, data zoom. </td>
+                                    </tr>
+                                    <tr class="bgRed">
+                                        <td> <b>{Object}</b> roamController </td>
+                                        <td> zoom and roam controller, use for the map. </td>
+                                    </tr>
+                                    <tr class="bgRed">
+                                        <td> <b>{Object}</b> grid </td>
+                                        <td> A network of regularly spaced lines on a Cartesian coordinate system </td>
+                                    </tr>
+                                    <tr class="bgRed">
+                                        <td> <b>{Array | Object}</b> xAxis </td>
+                                        <td> The horizontal axis array of a two-dimensional plot in Cartesian coordinates, and each item in the array represents one horizontal axis. According to Standard (1.0), at most two horizontal axes are allowed in one chart. </td>
+                                    </tr>
+                                    <tr class="bgRed">
+                                        <td> <b>{Array | Object}</b> yAxis </td>
+                                        <td> The vertical axis array of a two-dimensional plot in Cartesian coordinates, and each item in the array represents one vertical axis. According to Standard (1.0), at most two vertical axes are allowed in one chart. </td>
+                                    </tr>
+                                    <tr class="bgBlue">
+                                        <td> <b>{Array}</b> series </td>
+                                        <td> The data array generated by data-driven chart, Each item in the array stands for a series' options and data. </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card card-block">
+                            <h3 class="card-title">Other Settings</h3>
+                            <div class="alert alert-success">
+                                All Other Setting are using in examples
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+    </div>
+
+  
+</body>
+</html>

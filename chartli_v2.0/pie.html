@@ -1,0 +1,1275 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!-- Standard Meta -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="image_src" type="image/jpeg" href="/images/logo.png" />
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <!-- Site Properities -->
+    <meta name="generator" content="Visual Studio 2015" />
+    <title>Chartli | Interactive Chart</title>
+    <meta name="description" content="Chartli Interactive Chart" />
+    <meta name="keywords" content="html5,chart,ui, library, framework, javascript,jquery,graphic,interactive" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/demo.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                        Chartli Interacive Chart
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="line.html">Line</a>
+                </li>
+                <li>
+                    <a href="bar.html">Bar</a>
+                </li>
+                <li>
+                    <a href="spray.html">Spraying</a>
+                </li>
+                <li>
+                    <a href="wax.html">Wax Stick</a>
+                </li>
+                <li>
+                    <a href="pie.html">Pie</a>
+                </li>
+                <li>
+                    <a href="radar.html">Radar</a>
+                </li>
+              
+                <li>
+                    <a href="fd.html">Forcing-Directing</a>
+                </li>
+                <li>
+                    <a href="map.html">Mapping</a>
+                </li>
+                <li>
+                    <a href="gauged.html">Gauged</a>
+                </li>
+                <li>
+                    <a href="cone.html">Cone</a>
+                </li>
+                <li>
+                    <a href="special.html">Special</a>
+                </li>
+                <li>
+                    <a href="documentation.html">Documentation</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card card-block">
+                            <h3 class="card-title">Pie Chart Example</h3>
+                            <div id="chartli1" style="height:400px;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card card-block">
+                            <h3 class="card-title">Pie Chart Example</h3>
+                            <div id="chartli2" style="height:400px;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card card-block">
+                            <h3 class="card-title">Pie Chart Example</h3>
+                            <div id="chartli3" style="height:400px;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 col-xs-12">
+                        <div class="card card-block">
+                            <h3 class="card-title">Pie Chart Example</h3>
+                            <div id="chartli4" style="height:400px;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 col-xs-12">
+                        <div class="card card-block">
+                            <h3 class="card-title">Pie Chart Example</h3>
+                            <div id="chartli5" style="width: 100%;height:400px;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="card card-block">
+                            <h3 class="card-title">Pie Chart Example</h3>
+                            <div id="chartli6" style="height:400px;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 col-xs-12">
+                        <div class="card card-block">
+                            <h3 class="card-title">Pie Chart Example</h3>
+                            <div id="chartli7" style="width: 100%;height:400px;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 col-xs-12">
+                        <div class="card card-block">
+                            <h3 class="card-title">Pie Chart Example</h3>
+                            <div id="chartli8" style="width: 100%;height:400px;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 col-xs-12">
+                        <div class="card card-block">
+                            <h3 class="card-title">Pie Chart Example</h3>
+                            <div id="mainline9" style="width: 100%;height:400px;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+    </div>
+
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/chartli.js"></script>
+    <script type="text/javascript">
+
+        var chartliexample1 = echarts.init(document.getElementById('chartli1'));
+
+        option = {
+            title: {
+                text: 'A site user to access source',
+                subtext: '',
+                x: 'center'
+            },
+            tooltip: {
+                trigger: 'item',
+                formatter: "{a} <br />{b} : {c} ({d}%)"
+            },
+            legend: {
+                orient: 'vertical',
+                x: 'left',
+                data: ['Direct Interview', 'E-mail Marketing', 'Advertising Alliance', 'Video Ads', 'Search Engine']
+            },
+            toolbox: {
+                show: true,
+                feature: {
+                    mark: { show: true },
+                    dataView: { show: true, readOnly: false },
+                    magicType: {
+                        show: true,
+                        type: ['pie', 'funnel'],
+                        option: {
+                            funnel: {
+                                x: '25%',
+                                width: '50%',
+                                funnelAlign: 'left',
+                                max: 1548
+                            }
+                        }
+                    },
+                    restore: { show: true },
+                    saveAsImage: { show: true }
+                }
+            },
+            color: ["#EF476F", "#FFD166", "#06D6A0", "#118AB2", "#073B4C"],
+            calculable: true,
+            series: [
+                {
+                    name: 'Access Sources',
+                    type: 'pie',
+                    radius: '55%',
+                    center: ['50%', '60%'],
+                    data: [
+                        { value: 335, name: 'Direct Interview' },
+                        { value: 310, name: 'E-mail Marketing' },
+                        { value: 234, name: 'Advertising Alliance' },
+                        { value: 135, name: 'Video Ads' },
+                        { value: 1548, name: 'Search Engine' }
+                    ]
+                }
+            ]
+        };
+
+        chartliexample1.setOption(option);
+    </script>
+    <script type="text/javascript">
+
+        var chartliexample2 = echarts.init(document.getElementById('chartli2'));
+
+        option = {
+            tooltip: {
+                trigger: 'item',
+                formatter: "{a} <br />{b} : {c} ({d}%)"
+            },
+            legend: {
+                orient: 'vertical',
+                x: 'left',
+                data: ['Direct Interview', 'E-mail Marketing', 'Advertising Alliance', 'Video Ads', 'Search Engine']
+            },
+            toolbox: {
+                show: true,
+                feature: {
+                    mark: { show: true },
+                    dataView: { show: true, readOnly: false },
+                    magicType: {
+                        show: true,
+                        type: ['pie', 'funnel'],
+                        option: {
+                            funnel: {
+                                x: '25%',
+                                width: '50%',
+                                funnelAlign: 'center',
+                                max: 1548
+                            }
+                        }
+                    },
+                    restore: { show: true },
+                    saveAsImage: { show: true }
+                }
+            },
+            color: ["#06D6A0", "#FFD166", "#EF476F", "#118AB2", "#073B4C"],
+            calculable: true,
+            series: [
+                {
+                    name: 'Access Sources',
+                    type: 'pie',
+                    radius: ['50%', '70%'],
+                    itemStyle: {
+                        normal: {
+                            label: {
+                                show: false
+                            },
+                            labelLine: {
+                                show: false
+                            }
+                        },
+                        emphasis: {
+                            label: {
+                                show: true,
+                                position: 'center',
+                                textStyle: {
+                                    fontSize: '15',
+                                    fontWeight: 'bold'
+                                }
+                            }
+                        }
+                    },
+                    data: [
+                        { value: 335, name: 'Direct Interview' },
+                        { value: 310, name: 'E-mail Marketing' },
+                        { value: 234, name: 'Advertising Alliance' },
+                        { value: 135, name: 'Video Ads' },
+                        { value: 1548, name: 'Search Engine' }
+                    ]
+                }
+            ]
+        };
+
+        chartliexample2.setOption(option);
+    </script>
+    <script>
+        var chartliexample3 = echarts.init(document.getElementById('chartli3'));
+        option = {
+            tooltip: {
+                trigger: 'item',
+                formatter: "{a} <br />{b} : {c} ({d}%)"
+            },
+            legend: {
+                orient: 'vertical',
+                x: 'left',
+                data: ['Through', 'E-mail Marketing', 'Advertising Alliance', 'Video Ads', 'Yandex', 'Google', 'Bing', 'Other']
+            },
+            toolbox: {
+                show: true,
+                feature: {
+                    mark: { show: true },
+                    dataView: { show: true, readOnly: false },
+                    magicType: {
+                        show: true,
+                        type: ['pie', 'funnel']
+                    },
+                    restore: { show: true },
+                    saveAsImage: { show: true }
+                }
+            },
+            color: ['#EAC435', '#345995', '#E40066', '#03CEA4', '#FB4D3D', '#403F4C', '#FA7921', '#1B998B'],
+
+
+            calculable: false,
+            series: [
+                {
+                    name: 'Access Sources',
+                    type: 'pie',
+                    selectedMode: 'single',
+                    radius: [0, 70],
+
+                    // for funnel
+                    x: '20%',
+                    width: '40%',
+                    funnelAlign: 'right',
+                    max: 1548,
+
+                    itemStyle: {
+                        normal: {
+                            label: {
+                                position: 'inner'
+                            },
+                            labelLine: {
+                                show: false
+                            }
+                        }
+                    },
+                    data: [
+                        { value: 650, name: 'Yandex' },
+                        { value: 379, name: 'Bing' },
+                        { value: 1500, name: 'Google', selected: true }
+                    ]
+                },
+                {
+                    name: 'Access Sources',
+                    type: 'pie',
+                    radius: [100, 140],
+
+                    // for funnel
+                    x: '60%',
+                    width: '35%',
+                    funnelAlign: 'left',
+                    max: 1048,
+
+                    data: [
+                        { value: 335, name: 'Through' },
+                        { value: 310, name: 'E-mail Marketing' },
+                        { value: 234, name: 'Advertising Alliance' },
+                        { value: 135, name: 'Video Ads' },
+                        { value: 20, name: 'Yandex' },
+                        { value: 1500, name: 'Google' },
+                        { value: 147, name: 'Bing' },
+                        { value: 102, name: 'Other' }
+                    ]
+                }
+            ]
+        };
+
+        chartliexample3.setOption(option);
+    </script>
+    <script>
+        var chartliexample4 = echarts.init(document.getElementById('chartli4'));
+        option = {
+            title: {
+                text: '',
+                subtext: '',
+                x: 'center'
+            },
+            tooltip: {
+                trigger: 'item',
+                formatter: "{a} <br />{b} : {c} ({d}%)"
+            },
+            legend: {
+                x: 'center',
+                y: 'bottom',
+                data: ['Mercedes', 'BMW', 'Audi', 'Volvo', 'Subaru', 'Ford', 'Reanult', 'Toyota']
+            },
+            toolbox: {
+                show: true,
+                feature: {
+                    mark: { show: true },
+                    dataView: { show: true, readOnly: false },
+                    magicType: {
+                        show: true,
+                        type: ['pie', 'funnel']
+                    },
+                    restore: { show: true },
+                    saveAsImage: { show: true }
+                }
+            },
+            color: ['#EAC435', '#345995', '#E40066', '#03CEA4', '#FB4D3D', '#403F4C', '#FA7921', '#1B998B'],
+
+            calculable: true,
+            series: [
+                {
+                    name: 'Radius Mode',
+                    type: 'pie',
+                    radius: [20, 110],
+                    center: ['25%', 200],
+                    roseType: 'radius',
+                    width: '40%',       // for funnel
+                    max: 40,            // for funnel
+                    itemStyle: {
+                        normal: {
+                            label: {
+                                show: false
+                            },
+                            labelLine: {
+                                show: false
+                            }
+                        },
+                        emphasis: {
+                            label: {
+                                show: true
+                            },
+                            labelLine: {
+                                show: true
+                            }
+                        }
+                    },
+                    data: [
+                        { value: 10, name: 'Mercedes' },
+                        { value: 5, name: 'BMW' },
+                        { value: 15, name: 'Audi' },
+                        { value: 25, name: 'Volvo' },
+                        { value: 20, name: 'Subaru' },
+                        { value: 35, name: 'Ford' },
+                        { value: 30, name: 'Reanult' },
+                        { value: 40, name: 'Toyota' }
+                    ]
+                },
+                {
+                    name: 'Area Mode',
+                    type: 'pie',
+                    radius: [30, 110],
+                    center: ['75%', 200],
+                    roseType: 'area',
+                    x: '50%',               // for funnel
+                    max: 40,                // for funnel
+                    sort: 'ascending',     // for funnel
+                    data: [
+                        { value: 10, name: 'Mercedes' },
+                        { value: 5, name: 'BMW' },
+                        { value: 15, name: 'Audi' },
+                        { value: 25, name: 'Volvo' },
+                        { value: 20, name: 'Subaru' },
+                        { value: 35, name: 'Ford' },
+                        { value: 30, name: 'Reanult' },
+                        { value: 40, name: 'Toyota' }
+                    ]
+                }
+            ]
+        };
+
+        chartliexample4.setOption(option);
+    </script>
+    <script>
+        var chartliexample5 = echarts.init(document.getElementById('chartli5'));
+        var labelTop = {
+            normal: {
+                label: {
+                    show: true,
+                    position: 'center',
+                    formatter: '{b}',
+                    textStyle: {
+                        baseline: 'bottom'
+                    }
+                },
+                labelLine: {
+                    show: false
+                }
+            }
+        };
+        var labelFromatter = {
+            normal: {
+                label: {
+                    formatter: function (params) {
+                        return 100 - params.value + '%'
+                    },
+                    textStyle: {
+                        baseline: 'top'
+                    }
+                }
+            },
+        }
+        var labelBottom = {
+            normal: {
+                color: '#ccc',
+                label: {
+                    show: true,
+                    position: 'center'
+                },
+                labelLine: {
+                    show: false
+                }
+            },
+            emphasis: {
+                color: 'rgba(0,0,0,0)'
+            }
+        };
+
+        var radius = [40, 55];
+        option = {
+            legend: {
+                x: 'center',
+                y: 'center',
+                data: [
+                    'Games', 'Business', 'Education', 'Lifestyle', 'Utilities',
+                    'Travel', 'Books', 'Messenger', 'Health', 'Music'
+                ]
+            },
+            color: ['#EAC435', '#345995', '#E40066', '#03CEA4', '#FB4D3D', '#403F4C', '#FA7921', '#1B998B'],
+
+            title: {
+                text: 'Most popular Apple App Store categories in March 2016',
+                subtext: 'from global web index',
+                x: 'center'
+            },
+            toolbox: {
+                show: true,
+                feature: {
+                    dataView: { show: true, readOnly: false },
+                    magicType: {
+                        show: true,
+                        type: ['pie', 'funnel'],
+                        option: {
+                            funnel: {
+                                width: '20%',
+                                height: '30%',
+                                itemStyle: {
+                                    normal: {
+                                        label: {
+                                            formatter: function (params) {
+                                                return 'other\n' + params.value + '%\n'
+                                            },
+                                            textStyle: {
+                                                baseline: 'middle'
+                                            }
+                                        }
+                                    },
+                                }
+                            }
+                        }
+                    },
+                    restore: { show: true },
+                    saveAsImage: { show: true }
+                }
+            },
+            series: [
+                {
+                    type: 'pie',
+                    center: ['10%', '30%'],
+                    radius: radius,
+                    x: '0%', // for funnel
+                    itemStyle: labelFromatter,
+                    data: [
+                        { name: 'other', value: 78, itemStyle: labelBottom },
+                        { name: 'Games', value: 22, itemStyle: labelTop }
+                    ]
+                },
+                {
+                    type: 'pie',
+                    center: ['30%', '30%'],
+                    radius: radius,
+                    x: '20%', // for funnel
+                    itemStyle: labelFromatter,
+                    data: [
+                        { name: 'other', value: 90, itemStyle: labelBottom },
+                        { name: 'Business', value: 10, itemStyle: labelTop }
+                    ]
+                },
+                {
+                    type: 'pie',
+                    center: ['50%', '30%'],
+                    radius: radius,
+                    x: '40%', // for funnel
+                    itemStyle: labelFromatter,
+                    data: [
+                        { name: 'other', value: 91, itemStyle: labelBottom },
+                        { name: 'Education', value: 9, itemStyle: labelTop }
+                    ]
+                },
+                {
+                    type: 'pie',
+                    center: ['70%', '30%'],
+                    radius: radius,
+                    x: '60%', // for funnel
+                    itemStyle: labelFromatter,
+                    data: [
+                        { name: 'other', value: 92, itemStyle: labelBottom },
+                        { name: 'Lifestyle', value: 8, itemStyle: labelTop }
+                    ]
+                },
+                {
+                    type: 'pie',
+                    center: ['90%', '30%'],
+                    radius: radius,
+                    x: '80%', // for funnel
+                    itemStyle: labelFromatter,
+                    data: [
+                        { name: 'other', value: 95, itemStyle: labelBottom },
+                        { name: 'Utilities', value: 5, itemStyle: labelTop }
+                    ]
+                },
+                {
+                    type: 'pie',
+                    center: ['10%', '70%'],
+                    radius: radius,
+                    y: '55%',   // for funnel
+                    x: '0%',    // for funnel
+                    itemStyle: labelFromatter,
+                    data: [
+                        { name: 'other', value: 96, itemStyle: labelBottom },
+                        { name: 'Travel', value: 4, itemStyle: labelTop }
+                    ]
+                },
+                {
+                    type: 'pie',
+                    center: ['30%', '70%'],
+                    radius: radius,
+                    y: '55%',   // for funnel
+                    x: '20%',    // for funnel
+                    itemStyle: labelFromatter,
+                    data: [
+                        { name: 'other', value: 97, itemStyle: labelBottom },
+                        { name: 'Books', value: 3, itemStyle: labelTop }
+                    ]
+                },
+                {
+                    type: 'pie',
+                    center: ['50%', '70%'],
+                    radius: radius,
+                    y: '55%',   // for funnel
+                    x: '40%', // for funnel
+                    itemStyle: labelFromatter,
+                    data: [
+                        { name: 'other', value: 98, itemStyle: labelBottom },
+                        { name: 'Messenger', value: 2, itemStyle: labelTop }
+                    ]
+                },
+                {
+                    type: 'pie',
+                    center: ['70%', '70%'],
+                    radius: radius,
+                    y: '55%',   // for funnel
+                    x: '60%', // for funnel
+                    itemStyle: labelFromatter,
+                    data: [
+                        { name: 'other', value: 99, itemStyle: labelBottom },
+                        { name: 'Health', value: 1, itemStyle: labelTop }
+                    ]
+                },
+                {
+                    type: 'pie',
+                    center: ['90%', '70%'],
+                    radius: radius,
+                    y: '55%',   // for funnel
+                    x: '80%', // for funnel
+                    itemStyle: labelFromatter,
+                    data: [
+                        { name: 'other', value: 96, itemStyle: labelBottom },
+                        { name: 'Music', value: 4, itemStyle: labelTop }
+                    ]
+                }
+            ]
+        };
+
+        chartliexample5.setOption(option);
+    </script>
+    <script>
+
+        var chartliexample6 = echarts.init(document.getElementById('chartli6'));
+        var dataStyle = {
+            normal: {
+                label: { show: false },
+                labelLine: { show: false }
+            }
+        };
+        var placeHolderStyle = {
+            normal: {
+                color: 'rgba(0,0,0,0)',
+                label: { show: false },
+                labelLine: { show: false }
+            },
+            emphasis: {
+                color: 'rgba(0,0,0,0)'
+            }
+        };
+        option = {
+            title: {
+                text: 'Are you happy?',
+                subtext: '',
+                sublink: '',
+                x: 'center',
+                y: 'center',
+                itemGap: 20,
+                textStyle: {
+                    color: 'rgba(30,144,255,0.8)',
+                    //fontFamily: 'Microsoft elegant black',
+                    fontSize: 35,
+                    fontWeight: 'bolder'
+                }
+            },
+            tooltip: {
+                show: true,
+                formatter: "{a} <br />{b} : {c} ({d}%)"
+            },
+            color: ['#EAC435', '#345995', '#E40066', '#03CEA4', '#FB4D3D', '#403F4C', '#FA7921', '#1B998B'],
+
+            legend: {
+                orient: 'vertical',
+                x: document.getElementById('chartli6').offsetWidth / 2,
+                y: 45,
+                itemGap: 12,
+                data: ['68 percent said they had a good', '29% of people said a lot of pressure life', '3% of people said, "I had the surname"']
+            },
+            toolbox: {
+                show: true,
+                feature: {
+                    mark: { show: true },
+                    dataView: { show: true, readOnly: false },
+                    restore: { show: true },
+                    saveAsImage: { show: true }
+                }
+            },
+            series: [
+                {
+                    name: '1',
+                    type: 'pie',
+                    clockWise: false,
+                    radius: [125, 150],
+                    itemStyle: dataStyle,
+                    data: [
+                        {
+                            value: 68,
+                            name: '68 percent said they had a good'
+                        },
+                        {
+                            value: 32,
+                            name: 'invisible',
+                            itemStyle: placeHolderStyle
+                        }
+                    ]
+                },
+                {
+                    name: '2',
+                    type: 'pie',
+                    clockWise: false,
+                    radius: [100, 125],
+                    itemStyle: dataStyle,
+                    data: [
+                        {
+                            value: 29,
+                            name: '29% of people said a lot of pressure life'
+                        },
+                        {
+                            value: 71,
+                            name: 'invisible',
+                            itemStyle: placeHolderStyle
+                        }
+                    ]
+                },
+                {
+                    name: '3',
+                    type: 'pie',
+                    clockWise: false,
+                    radius: [75, 100],
+                    itemStyle: dataStyle,
+                    data: [
+                        {
+                            value: 3,
+                            name: '3% of people said, "I had the surname"'
+                        },
+                        {
+                            value: 97,
+                            name: 'invisible',
+                            itemStyle: placeHolderStyle
+                        }
+                    ]
+                }
+            ]
+        };
+
+        chartliexample6.setOption(option);
+    </script>
+    <script>
+
+        var chartliexample7 = echarts.init(document.getElementById('chartli7'));
+        var timeline;
+        var idx = 1;
+        option = {
+            timeline: {
+                data: [
+                    '2013-01-01', '2013-02-01', '2013-03-01', '2013-04-01', '2013-05-01',
+                    { name: '2013-06-01', symbol: 'emptyStar6', symbolSize: 8 },
+                    '2013-07-01', '2013-08-01', '2013-09-01', '2013-10-01', '2013-11-01',
+                    { name: '2013-12-01', symbol: 'star6', symbolSize: 8 }
+                ],
+                //label: {
+                //    formatter: function (s) {
+                //        return s.slice(0, 7);
+                //    }
+                //}
+            },
+            options: [
+                {
+                    title: {
+                        text: 'Browser accounting change',
+                        subtext: ''
+                    },
+                    tooltip: {
+                        trigger: 'item',
+                        formatter: "{a} <br />{b} : {c} ({d}%)"
+                    },
+                    legend: {
+                        data: ['Chrome', 'Firefox', 'Safari', 'IE9+', 'IE8-']
+                    },
+                    color: ['#EAC435', '#345995', '#E40066', '#03CEA4', '#FB4D3D', '#403F4C', '#FA7921', '#1B998B'],
+
+                    toolbox: {
+                        show: true,
+                        feature: {
+                            restore: { show: true, title: 'Refresh' },
+                            //magicType: { show: true, type: ['force', 'chord'] },
+                            saveAsImage: { show: true, title: 'Save As Image' },
+                            magicType: {
+                                show: true,
+                                type: ['pie', 'funnel'],
+                                option: {
+                                    funnel: {
+                                        x: '25%',
+                                        width: '50%',
+                                        funnelAlign: 'left',
+                                        max: 1700
+                                    }
+                                },
+                            },
+
+                        }
+                    },
+                    series: [
+                        {
+                            name: 'Browser（Data is purely fictional）',
+                            type: 'pie',
+                            center: ['50%', '45%'],
+                            radius: '50%',
+                            data: [
+                                { value: idx * 128 + 80, name: 'Chrome' },
+                                { value: idx * 64 + 160, name: 'Firefox' },
+                                { value: idx * 32 + 320, name: 'Safari' },
+                                { value: idx * 16 + 640, name: 'IE9+' },
+                                { value: idx++ * 8 + 1280, name: 'IE8-' }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    series: [
+                        {
+                            name: 'Browser（Data is purely fictional）',
+                            type: 'pie',
+                            data: [
+                                { value: idx * 128 + 80, name: 'Chrome' },
+                                { value: idx * 64 + 160, name: 'Firefox' },
+                                { value: idx * 32 + 320, name: 'Safari' },
+                                { value: idx * 16 + 640, name: 'IE9+' },
+                                { value: idx++ * 8 + 1280, name: 'IE8-' }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    series: [
+                        {
+                            name: 'Browser（Data is purely fictional）',
+                            type: 'pie',
+                            data: [
+                                { value: idx * 128 + 80, name: 'Chrome' },
+                                { value: idx * 64 + 160, name: 'Firefox' },
+                                { value: idx * 32 + 320, name: 'Safari' },
+                                { value: idx * 16 + 640, name: 'IE9+' },
+                                { value: idx++ * 8 + 1280, name: 'IE8-' }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    series: [
+                        {
+                            name: 'Browser（Data is purely fictional）',
+                            type: 'pie',
+                            data: [
+                                { value: idx * 128 + 80, name: 'Chrome' },
+                                { value: idx * 64 + 160, name: 'Firefox' },
+                                { value: idx * 32 + 320, name: 'Safari' },
+                                { value: idx * 16 + 640, name: 'IE9+' },
+                                { value: idx++ * 8 + 1280, name: 'IE8-' }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    series: [
+                        {
+                            name: 'Browser（Data is purely fictional）',
+                            type: 'pie',
+                            data: [
+                                { value: idx * 128 + 80, name: 'Chrome' },
+                                { value: idx * 64 + 160, name: 'Firefox' },
+                                { value: idx * 32 + 320, name: 'Safari' },
+                                { value: idx * 16 + 640, name: 'IE9+' },
+                                { value: idx++ * 8 + 1280, name: 'IE8-' }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    series: [
+                        {
+                            name: 'Browser（Data is purely fictional）',
+                            type: 'pie',
+                            data: [
+                                { value: idx * 128 + 80, name: 'Chrome' },
+                                { value: idx * 64 + 160, name: 'Firefox' },
+                                { value: idx * 32 + 320, name: 'Safari' },
+                                { value: idx * 16 + 640, name: 'IE9+' },
+                                { value: idx++ * 8 + 1280, name: 'IE8-' }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    series: [
+                        {
+                            name: 'Browser（Data is purely fictional）',
+                            type: 'pie',
+                            data: [
+                                { value: idx * 128 + 80, name: 'Chrome' },
+                                { value: idx * 64 + 160, name: 'Firefox' },
+                                { value: idx * 32 + 320, name: 'Safari' },
+                                { value: idx * 16 + 640, name: 'IE9+' },
+                                { value: idx++ * 8 + 1280, name: 'IE8-' }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    series: [
+                        {
+                            name: 'Browser（Data is purely fictional）',
+                            type: 'pie',
+                            data: [
+                                { value: idx * 128 + 80, name: 'Chrome' },
+                                { value: idx * 64 + 160, name: 'Firefox' },
+                                { value: idx * 32 + 320, name: 'Safari' },
+                                { value: idx * 16 + 640, name: 'IE9+' },
+                                { value: idx++ * 8 + 1280, name: 'IE8-' }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    series: [
+                        {
+                            name: 'Browser（Data is purely fictional）',
+                            type: 'pie',
+                            data: [
+                                { value: idx * 128 + 80, name: 'Chrome' },
+                                { value: idx * 64 + 160, name: 'Firefox' },
+                                { value: idx * 32 + 320, name: 'Safari' },
+                                { value: idx * 16 + 640, name: 'IE9+' },
+                                { value: idx++ * 8 + 1280, name: 'IE8-' }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    series: [
+                        {
+                            name: 'Browser（Data is purely fictional）',
+                            type: 'pie',
+                            data: [
+                                { value: idx * 128 + 80, name: 'Chrome' },
+                                { value: idx * 64 + 160, name: 'Firefox' },
+                                { value: idx * 32 + 320, name: 'Safari' },
+                                { value: idx * 16 + 640, name: 'IE9+' },
+                                { value: idx++ * 8 + 1280, name: 'IE8-' }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    series: [
+                        {
+                            name: 'Browser（Data is purely fictional）',
+                            type: 'pie',
+                            data: [
+                                { value: idx * 128 + 80, name: 'Chrome' },
+                                { value: idx * 64 + 160, name: 'Firefox' },
+                                { value: idx * 32 + 320, name: 'Safari' },
+                                { value: idx * 16 + 640, name: 'IE9+' },
+                                { value: idx++ * 8 + 1280, name: 'IE8-' }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    series: [
+                        {
+                            name: 'Browser（Data is purely fictional）',
+                            type: 'pie',
+                            data: [
+                                { value: idx * 128 + 80, name: 'Chrome' },
+                                { value: idx * 64 + 160, name: 'Firefox' },
+                                { value: idx * 32 + 320, name: 'Safari' },
+                                { value: idx * 16 + 640, name: 'IE9+' },
+                                { value: idx++ * 8 + 1280, name: 'IE8-' }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        };
+
+        chartliexample7.setOption(option);
+    </script>
+    <script>
+
+        var chartliexample8 = echarts.init(document.getElementById('chartli8'));
+
+        option = {
+            title: {
+                text: 'Browser',
+                subtext: '',
+                x: 'right',
+                y: 'bottom'
+            },
+            tooltip: {
+                trigger: 'item',
+                formatter: "{a} <br />{b} : {c} ({d}%)"
+            },
+            legend: {
+                orient: 'vertical',
+                x: 'left',
+                data: ['Chrome', 'Firefox', 'Safari', 'IE9+', 'IE8-']
+            },
+            toolbox: {
+                show: true,
+                feature: {
+                    restore: { show: true, title: 'Refresh' },
+                    //magicType: { show: true, type: ['force', 'chord'] },
+                    saveAsImage: { show: true, title: 'Save As Image' }
+                }
+            },
+            color: ['#EAC435', '#345995', '#E40066', '#03CEA4', '#FB4D3D', '#403F4C', '#FA7921', '#1B998B'],
+
+            calculable: false,
+            series: (function () {
+                var series = [];
+                for (var i = 0; i < 30; i++) {
+                    series.push({
+                        name: 'Browser（Data is purely fictional）',
+                        type: 'pie',
+                        itemStyle: {
+                            normal: {
+                                label: { show: i > 28 },
+                                labelLine: { show: i > 28, length: 20 }
+                            }
+                        },
+                        radius: [i * 4 + 40, i * 4 + 43],
+                        data: [
+                            { value: i * 128 + 80, name: 'Chrome' },
+                            { value: i * 64 + 160, name: 'Firefox' },
+                            { value: i * 32 + 320, name: 'Safari' },
+                            { value: i * 16 + 640, name: 'IE9+' },
+                            { value: i * 8 + 1280, name: 'IE8-' }
+                        ]
+                    })
+                }
+                series[0].markPoint = {
+                    symbol: 'emptyCircle',
+                    symbolSize: series[0].radius[0],
+                    effect: { show: true, scaleSize: 12, color: 'rgba(250,225,50,0.8)', shadowBlur: 10, period: 30 },
+                    data: [{ x: '50%', y: '50%' }]
+                };
+                return series;
+            })()
+        };
+        
+
+        chartliexample8.setOption(option);
+    </script>
+    <script>
+
+        var chartliexample9 = echarts.init(document.getElementById('mainline9'));
+
+        option = {
+            tooltip: {
+                show: true,
+                formatter: "{a} <br />{b} : {c} ({d}%)"
+            },
+            legend: {
+                orient: 'vertical',
+                x: 'left',
+                data: ['Through', 'Marketing Advertising', 'Search Engine', 'E-mail Marketing', 'Advertising Alliance', 'Video Ads', 'Baidu', 'Google', 'Bing', 'Other']
+            },
+            toolbox: {
+                show: true,
+                feature: {
+                    restore: { show: true, title: 'Refresh' },
+                    //magicType: { show: true, type: ['force', 'chord'] },
+                    saveAsImage: { show: true, title: 'Save As Image' }
+                }
+            },
+            calculable: true,
+            color: ['#EAC435', '#345995', '#E40066', '#03CEA4', '#FB4D3D', '#403F4C', '#FA7921', '#1B998B'],
+            backgroundColor: '#eee',
+            series: [
+                {
+                    name: 'Access Sources',
+                    type: 'pie',
+                    center: ['35%', 200],
+                    radius: 80,
+                    itemStyle: {
+                        normal: {
+                            label: {
+                                position: 'inner',
+                                formatter: function (params) {
+                                    return (params.percent - 0).toFixed(0) + '%'
+                                }
+                            },
+                            labelLine: {
+                                show: false
+                            }
+                        },
+                        emphasis: {
+                            label: {
+                                show: true,
+                                formatter: "{b}\n{d}%"
+                            }
+                        }
+
+                    },
+                    data: [
+                        { value: 335, name: 'Through' },
+                        { value: 679, name: 'Marketing Advertising' },
+                        { value: 1548, name: 'Search Engine' }
+                    ]
+                },
+                {
+                    name: 'Access Sources',
+                    type: 'pie',
+                    center: ['35%', 200],
+                    radius: [110, 140],
+                    data: [
+                        { value: 335, name: 'Through' },
+                        { value: 310, name: 'E-mail Marketing' },
+                        { value: 234, name: 'Advertising Alliance' },
+                        { value: 135, name: 'Video Ads' },
+                        {
+                            value: 1048,
+                            name: 'Baidu',
+                            itemStyle: {
+                                normal: {
+                                 
+                                    label: {
+                                        textStyle: {
+                                            color: 'rgba(30,144,255,0.8)',
+                                            align: 'center',
+                                            baseline: 'middle',
+                                            fontFamily: 'Microsoft elegant black',
+                                            fontSize: 30,
+                                            fontWeight: 'bolder'
+                                        }
+                                    },
+                                    labelLine: {
+                                        length: 40,
+                                        lineStyle: {
+                                            color: '#f0f',
+                                            width: 3,
+                                            type: 'dotted'
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        { value: 251, name: 'Google' },
+                        {
+                            value: 102,
+                            name: 'Bing',
+                            itemStyle: {
+                                normal: {
+                                    label: {
+                                        show: false
+                                    },
+                                    labelLine: {
+                                        show: false
+                                    }
+                                },
+                                emphasis: {
+                                    label: {
+                                        show: true
+                                    },
+                                    labelLine: {
+                                        show: true,
+                                        length: 50
+                                    }
+                                }
+                            }
+                        },
+                        { value: 147, name: 'Other' }
+                    ]
+                },
+                {
+                    name: 'Access Sources',
+                    type: 'pie',
+                    clockWise: true,
+                    startAngle: 135,
+                    center: ['75%', 200],
+                    radius: [80, 120],
+                    itemStyle: {
+                        normal: {
+                            label: {
+                                show: false
+                            },
+                            labelLine: {
+                                show: false
+                            }
+                        },
+                        emphasis: {
+                         
+                            label: {
+                                show: true,
+                                position: 'center',
+                                formatter: "{d}%",
+                                textStyle: {
+                                    color: 'red',
+                                    fontSize: '30',
+                                    fontFamily: 'Microsoft elegant black',
+                                    fontWeight: 'bold'
+                                }
+                            }
+                        }
+                    },
+                    data: [
+                        { value: 335, name: 'Through' },
+                        { value: 310, name: 'E-mail Marketing' },
+                        { value: 234, name: 'Advertising Alliance' },
+                        { value: 135, name: 'Video Ads' },
+                        { value: 1548, name: 'Search Engine' }
+                    ],
+                    
+                }
+            ]
+        };
+
+        chartliexample9.setOption(option);
+    </script>
+</body>
+</html>

@@ -2,7 +2,7 @@ import Head from "next/head";
 import ProfilePic from "../img/profilepic.jpg";
 
 export default function MetaHeader({
-  title = "Goh SW. | A visionary and a passionate entrepreneur",
+  title = "Goh SW. | A Visionary and a Passionate Entrepreneur",
   description = "Dr. Goh's investment portfolio has spread across real estate developments, technology companies and civil engineering projects globally ",
   image = ProfilePic,
 }) {

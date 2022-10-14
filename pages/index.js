@@ -28,13 +28,25 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="mt-6 flex space-x-3 sm:border-l sm:border-transparent sm:pl-6">
-                  <a href="https://twitter.com/gsw85" target="_blank">
+                  <a
+                    href="https://twitter.com/gsw85"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <BsTwitter className="h-5 w-5 mr-2 text-twitter hover:text-sky-600" />
                   </a>
-                  <a href="https://github.com/gsw85" target="_blank">
+                  <a
+                    href="https://github.com/gsw85"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <BsGithub className="h-5 w-5 mr-2 text-black hover:text-gray-700" />
                   </a>
-                  <a href="https://my.linkedin.com/in/gsw85" target="_blank">
+                  <a
+                    href="https://my.linkedin.com/in/gsw85"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <BsLinkedin className="h-5 w-5 mr-2 text-linkedin hover:text-cyan-900" />
                   </a>
                 </div>

@@ -9,11 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-icons/all-files": "^4.1.0",
     "next": "12.3.1",
-    "next-transpile-modules": "^9.1.0",
     "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "react-icons": "^4.4.0"
+    "react-dom": "18.2.0"
   },
   "devDependencies": {
     "@headlessui/react": "^1.7.2",

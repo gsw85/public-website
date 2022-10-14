@@ -1,2 +1,1 @@
-# Website
-Website for gsw85.com
+This is the website for gsw85.com

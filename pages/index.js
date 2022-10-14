@@ -1,7 +1,6 @@
 import Image from "next/future/image";
 import ProfilePic from "../src/img/profilepic.jpg";
 import MetaHeader from "../src/components/meta-header";
-import { BsTwitter, BsGithub, BsLinkedin } from "react-icons/all";
 
 export default function Home() {
   return (
@@ -33,21 +32,21 @@ export default function Home() {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <BsTwitter className="h-5 w-5 mr-2 text-twitter hover:text-sky-600" />
+                    <div className="h-5 w-5 mr-2 text-twitter hover:text-sky-600" />
                   </a>
                   <a
                     href="https://github.com/gsw85"
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <BsGithub className="h-5 w-5 mr-2 text-black hover:text-gray-700" />
+                    <div className="h-5 w-5 mr-2 text-black hover:text-gray-700" />
                   </a>
                   <a
                     href="https://my.linkedin.com/in/gsw85"
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <BsLinkedin className="h-5 w-5 mr-2 text-linkedin hover:text-cyan-900" />
+                    <div className="h-5 w-5 mr-2 text-linkedin hover:text-cyan-900" />
                   </a>
                 </div>
               </div>

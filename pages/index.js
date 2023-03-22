@@ -1,4 +1,4 @@
-import Image from "next/future/image";
+import Image from "next/image";
 import ProfilePic from "../src/img/profilepic.jpg";
 import MetaHeader from "../src/components/meta-header";
 
@@ -20,10 +20,10 @@ export default function Home() {
               <div className="sm:ml-6">
                 <div className="sm:border-l sm:border-gray-200 sm:pl-6">
                   <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-                    GOH SW.
+                    GOH S.W.
                   </h1>
                   <p className="mt-1 text-base text-gray-500">
-                    There are no words to describe him
+                    There are no words to describe he/him
                   </p>
                 </div>
                 <div className="mt-6 flex space-x-3 sm:border-l sm:border-transparent sm:pl-6">

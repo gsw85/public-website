@@ -1,5 +1,4 @@
 import Image from "next/image";
-import ProfilePic from "../src/img/profilepic.jpg";
 import MetaHeader from "../src/components/meta-header";
 import { RocketLaunchIcon } from "@heroicons/react/24/solid";
 
@@ -13,7 +12,7 @@ export default function Home() {
           <div className="mx-auto max-w-max">
             <main className="sm:flex">
               <Image
-                src={ProfilePic}
+                src={"/img/profilepic.jpg"}
                 width={200}
                 height={200}
                 className="h-20 w-20 rounded-full"

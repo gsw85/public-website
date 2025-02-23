@@ -1,20 +1,21 @@
 /** @type {import('tailwindcss').Config} */
-const colors = require("tailwindcss/colors");
-
-module.exports = {
+export default {
+  darkMode: "class", // Important!
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
+      screens: {
+        xs: "480px",
+        xxl: "1800px",
+        "2xxl": "2250px",
+      },
       colors: {
-        sky: colors.sky,
-        teal: colors.teal,
-        cyan: colors.cyan,
-        rose: colors.rose,
-        twitter: "#00acee",
-        linkedin: "#0072b1",
+        background: "var(--background)",
+        foreground: "var(--foreground)",
       },
     },
   },

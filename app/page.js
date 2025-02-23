@@ -11,8 +11,9 @@ export default function Page() {
               src={"/img/profile.jpg"}
               width={200}
               height={200}
-              className="h-20 w-20 rounded-full"
+              className="size-20 rounded-full"
               alt="Goh Shu Wei"
+              title={`Goh Shu Wei`}
             />
             <div className="sm:ml-6">
               <div className="sm:border-l sm:border-gray-200 sm:pl-6">

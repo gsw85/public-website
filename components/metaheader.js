@@ -4,11 +4,11 @@ export default function metaheader(
   titleInit = "",
   descriptionInit = "",
   keywordsInit = "",
-  path = "/",
+  path = "/"
 ) {
   const title = titleInit
     ? titleInit
-    : "Goh SW. | A Visionary and a Passionate Entrepreneur";
+    : "Goh S.W. | A Visionary and a Passionate Entrepreneur";
 
   const description = descriptionInit
     ? descriptionInit

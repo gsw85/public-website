@@ -30,7 +30,6 @@ export default function metaheader(
         },
       ],
     },
-    robots: { index: true, follow: true },
     alternates: { canonical: urlPath },
   };
 }
